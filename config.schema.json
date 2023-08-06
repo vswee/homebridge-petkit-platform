@@ -3,7 +3,7 @@
   "pluginType": "platform",
   "singular": true,
   "headerDisplay": "For documentation please see https://github.com/jubepue/petkit-homebridge .",
-  "footerDisplay": "",
+  "footerDisplay": "TESTING BRANCH",
   "schema": {
     "type": "object",
     "properties": {
