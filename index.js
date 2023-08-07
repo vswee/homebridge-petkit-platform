@@ -1,6 +1,6 @@
 const PetkitOpenAPI = require("./lib/petkitopenapi");
 const FeederAccessory = require('./lib/feederaccessory');
-const LitterBoxAccessory = require('./lib/LitterBoxAccessory');
+const LitterBoxAccessory = require('./lib/litterboxaccessory');
 const PetkitListener = require("./lib/petkitlistener");
 
 const LogUtil = require('./util/logutil');
