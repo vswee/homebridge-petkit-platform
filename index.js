@@ -1,5 +1,6 @@
 const PetkitOpenAPI = require("./lib/petkitopenapi");
 const FeederAccessory = require('./lib/feederaccessory');
+const LitterBoxAccessory = require('./lib/LitterBoxAccessory');
 const PetkitListener = require("./lib/petkitlistener");
 
 const LogUtil = require('./util/logutil');
@@ -96,6 +97,11 @@ class PetkitPlatform {
       case 'D4':
       case 'D4s':
         deviceAccessory = new FeederAccessory(this, homebridgeAccessory, device);
+        this.accessories.set(uuid, deviceAccessory.homebridgeAccessory);
+        this.deviceAccessories.set(uuid, deviceAccessory);
+        break;
+      case 'T4':
+        deviceAccessory = new LitterBoxAccessory(this, homebridgeAccessory, device);
         this.accessories.set(uuid, deviceAccessory.homebridgeAccessory);
         this.deviceAccessories.set(uuid, deviceAccessory);
         break;
